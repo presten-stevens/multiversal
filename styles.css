@@ -15,17 +15,9 @@
     background-color: rgba(169, 169, 169, 0.205);
  }
 
- #grid-right-banner {
-    grid-area: auto;
-    justify-content: right;
-    flex-direction: row-reverse;
- }
-
- #grid-left-banner {
-    grid-area: auto;
-    justify-content: left;
-    
- }
+#grid-right-banner, #grid-left-banner {
+    grid-column: span 1;
+}
 
  #grid-bottom {
     grid-column: 2 / 3;
@@ -42,8 +34,7 @@
     float: right; 
     padding-top: 60px;
     padding-right: 30px;
-    border-radius: 3%;
-    
+    border-radius: 3%;  
  }
 
  .right{
@@ -126,7 +117,7 @@ a:hover {
     background-color: #f0f0f0;
 }
 
-iframe {
+.hidden {
     display: none;
     margin-top: 10px;
     padding: 10px;

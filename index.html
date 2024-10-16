@@ -41,11 +41,13 @@
                 <section id="container">
                     <img src="leftside.jpg" alt="Advert" class="propaganda" width="250">
                     <span class="link" id="videoLink">Click here to watch the video</span>
-                    <iframe width="640" height="360" 
-                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                        frameborder="0" 
-                        allowfullscreen> 
-                    </iframe>
+                    <div class="hidden-video" id="videoContainer">
+                        <iframe width="640" height="360" 
+                            src="https://www.youtube.com/embed/VIDEO_ID" 
+                            frameborder="0" 
+                            allowfullscreen> 
+                        </iframe>
+                    </div>
                     
                 </section>
 
@@ -55,7 +57,7 @@
         <script>
             const videoLink = document.getElementById('videoLink');
             const videoContainer = document.getElementById('videoContainer');
-    
+
             videoLink.addEventListener('click', () => {
                 if (videoContainer.style.display === 'block') {
                     videoContainer.style.display = 'none'; // Hide the video
