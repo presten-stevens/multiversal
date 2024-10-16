@@ -126,13 +126,13 @@ a:hover {
 }
 
 .link {
-    color: #007BFF;
+    color: #284c72;
     cursor: pointer;
     text-decoration: underline;
 }
 
 .link:hover {
-    color: #0056b3;
+    color: #3a3c3f;
 }
 
  /* #menu {
