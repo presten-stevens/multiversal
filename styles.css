@@ -5,6 +5,11 @@
     grid-template-columns: 15% 65% 15%;
     grid-template-rows: 15% 80% 5%;
  }
+
+ @font-face {
+    font-family: 'Star Jedi';
+    src: url('path/to/StarJedi.ttf') format('truetype');
+}
  
  /* #grid-container > div {
     background: powderblue;
@@ -72,6 +77,7 @@
  body {
     background-color: #333; /* Dark grey */
     color: white; /* Optional: Change text color to white for better contrast */
+    
 }
  /* #menu {
 
