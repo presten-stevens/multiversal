@@ -5,12 +5,6 @@
     grid-template-columns: 15% 65% 15%;
     grid-template-rows: 15% 80% 5%;
  }
-
- @font-face {
-    font-family: 'Star Jedi';
-    src: url('path/to/StarJedi.ttf') format('truetype');
-}
- 
  /* #grid-container > div {
     background: powderblue;
     
@@ -103,7 +97,7 @@ a:hover {
 
 .button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #40454b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -130,6 +124,24 @@ a:hover {
 
 .popup-menu a:hover {
     background-color: #f0f0f0;
+}
+
+iframe {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #2e2c2ce3;
+}
+
+.link {
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #0056b3;
 }
 
  /* #menu {

@@ -40,11 +40,11 @@
             <article id="grid-middle">
                 <section id="container">
                     <img src="leftside.jpg" alt="Advert" class="propaganda" width="250">
-                    <h1>Clones in action</h1>
+                    <span class="link" id="videoLink">Click here to watch the video</span>
                     <iframe width="640" height="360" 
                         src="https://www.youtube.com/embed/VIDEO_ID" 
                         frameborder="0" 
-                        allowfullscreen>
+                        allowfullscreen> 
                     </iframe>
                     
                 </section>
@@ -53,6 +53,20 @@
             <div id="grid-bottom">6</div>
         </div>
         <script>
+            const videoLink = document.getElementById('videoLink');
+            const videoContainer = document.getElementById('videoContainer');
+    
+            videoLink.addEventListener('click', () => {
+                if (videoContainer.style.display === 'block') {
+                    videoContainer.style.display = 'none'; // Hide the video
+                    videoLink.textContent = 'Click here to watch the video'; // Change link text
+                } else {
+                    videoContainer.style.display = 'block'; // Show the video
+                    videoLink.textContent = 'Hide the video'; // Change link text
+                }
+            });
+        </script>
+        <!-- <script>
             const menuButton = document.getElementById('menuButton');
             const popupMenu = document.getElementById('popupMenu');
     
@@ -70,6 +84,6 @@
                     popupMenu.style.display = 'none';
                 }
             });
-        </script>
+        </script> -->
     </body>
 </html>
