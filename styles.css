@@ -79,6 +79,28 @@
     color: white; /* Optional: Change text color to white for better contrast */
     
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+a {
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: white;
+    background-color: #444;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #555;
+}
+
  /* #menu {
 
  }
