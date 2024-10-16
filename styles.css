@@ -1,10 +1,11 @@
 
 #grid-container {
     display: grid; 
+    position: fixed;
     grid-template-rows:50px; /* 2 rows, each 150px tall */
     grid-template-columns: 20% 40% 20%;
     gap: 10px; /* Space between grid items */
-    height: 100vh; /* Full viewport height */
+    
     width: 100vw;  /* Full viewport width */ /* Set the height of the grid */
     /* border: 2px solid #333; Optional: to visualize the grid */
  }
@@ -34,7 +35,7 @@
 
  #grid-middle{
     display: flex;
-    grid-area: 2 / 2 /4/4;
+    grid-area: 2 / 2 /2/4;
  }
 
  .propaganda{
@@ -48,7 +49,8 @@
 
  #container {
     flex: 1;
-    border: 1px ;
+    position: relative;
+    border: 6px ;
     background-color: gray;
     border-radius: 10%;
     padding: 6px;
