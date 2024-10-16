@@ -2,10 +2,10 @@
 #grid-container {
     display: grid; 
     grid-template-rows:50px; /* 2 rows, each 150px tall */
-    grid-template-columns: 210px 700px 210px;
+    grid-template-columns: 20% 40% 20%;
     gap: 10px; /* Space between grid items */
-    width: auto; /* Set the width of the grid */
-    height: 700px; /* Set the height of the grid */
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */ /* Set the height of the grid */
     /* border: 2px solid #333; Optional: to visualize the grid */
  }
  
@@ -15,7 +15,7 @@
  } */
 
  #grid-menu {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     background-color: rgba(169, 169, 169, 0.205);
  }
 
@@ -28,13 +28,13 @@
  }
 
  #grid-bottom {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     background-color: rgba(169, 169, 169, 0.205);
  }
 
  #grid-middle{
     display: flex;
-    grid-area: 2 / 2 /2/2;
+    grid-area: 2 / 2 /4/4;
  }
 
  .propaganda{
