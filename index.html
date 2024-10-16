@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
     <meta charset="UTF-8">
     <title>Recruitment office</title>
 </head>
@@ -12,28 +14,14 @@
             <div id="grid-menu">
                 <header class="headher">
                     <nav><button class="button" id="menuButton">Menu</button>
-
+                    
                     <div class="popup-menu" id="popupMenu">
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#contact">Contact</a>
                     </div>
                 
-                    <script>
-                        const menuButton = document.getElementById('menuButton');
-                        const popupMenu = document.getElementById('popupMenu');
-                
-                        menuButton.addEventListener('click', () => {
-                            popupMenu.style.display = popupMenu.style.display === 'block' ? 'none' : 'block';
-                        });
-                
-                        // Close the popup menu if clicking outside of it
-                        window.addEventListener('click', (event) => {
-                            if (!menuButton.contains(event.target) && !popupMenu.contains(event.target)) {
-                                popupMenu.style.display = 'none';
-                            }
-                        });
-                    </script></nav>
+                   </nav>
                     
                     <h1 class="headher">
                     Republic Recruiting office
@@ -64,5 +52,24 @@
             </article>
             <div id="grid-bottom">6</div>
         </div>
+        <script>
+            const menuButton = document.getElementById('menuButton');
+            const popupMenu = document.getElementById('popupMenu');
+    
+            menuButton.addEventListener('click', () => {
+                if (popupMenu.style.display === 'block') {
+                    popupMenu.style.display = 'none';
+                } else {
+                    popupMenu.style.display = 'block';
+                }
+            });
+    
+            // Close the popup menu if clicking outside of it
+            window.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !popupMenu.contains(event.target)) {
+                    popupMenu.style.display = 'none';
+                }
+            });
+        </script>
     </body>
 </html>
