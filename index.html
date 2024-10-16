@@ -12,6 +12,14 @@
         <div id="grid-container">
             <div id="grid-menu">
                 <header class="headher">
+                     
+                    <img src="logo2.png" alt="logo" height="125px">
+                    
+                    <h1 class="headher">
+                    Republic Recruiting office
+                    </h1>
+
+                    
                     <nav>
                         <button class="button" id="menuButton">Menu</button>
                         <div class="popup-menu" id="popupMenu">
@@ -20,12 +28,6 @@
                             <a href="#contact">Contact</a>
                         </div>
                    </nav>
-                    
-                    <h1 class="headher">
-                    Republic Recruiting office
-                    </h1>
-
-                    <img src="logo2.png" alt="logo" height="125px">
                     
                 </header>
             </div>
@@ -52,11 +54,14 @@
             <div id="grid-bottom"></div>
         </div>
         <div class="hidden-video" id="videoContainer">
-            <iframe width="640" height="360" 
-                src="https://www.youtube.com/watch?v=6p86JJ0zX3Q&t=4s" 
-                frameborder="0" 
-                allowfullscreen> 
-            </iframe>
+            <div class="popup-content">
+                <iframe width="640" height="360" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen> 
+                </iframe>
+                <span class="close" id="close-popup">&times;</span>
+            </div>
         </div>
         <script>
             const videoLink = document.getElementById('videoLink');
@@ -71,6 +76,16 @@
                     videoLink.textContent = 'Hide the video'; // Change link text
                 }
             });
+
+            window.onclick = function(event) {
+                if (event.target == document.getElementById("videoContainer")) {
+                    document.getElementById("videoContainer").style.display = "none";
+                }
+            }   
+
+            document.getElementById("close-popup").onclick = function() {
+                document.getElementById("videoContainer").style.display = "none";
+            }
 
             const menuButton = document.getElementById('menuButton');
             const popupMenu = document.getElementById('popupMenu');
