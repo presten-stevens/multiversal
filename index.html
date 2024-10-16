@@ -8,7 +8,6 @@
     <title>Recruitment office</title>
 </head>
     <body> 
-
         <div id="grid-container">
             <div id="grid-menu">
                 <header class="headher">
@@ -18,16 +17,15 @@
                     <h1 class="headher">
                     Republic Recruiting office
                     </h1>
-
-                    
                     <nav>
-                        <button class="button" id="menuButton">Menu</button>
-                        <div class="popup-menu" id="popupMenu">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                        <button id="showDivButton">Show Div</button>
+
+                        <div id="hiddenDiv" class="hidden">
+                            <h2>This is the hidden div!</h2>
+                            <p>You can see me now!</p>
+                            <button id="hideDivButton">Hide Div</button>
                         </div>
-                   </nav>
+                    </nav>
                     
                 </header>
             </div>
@@ -37,20 +35,12 @@
             <div id="grid-left-banner">
                 <img src="banner.PNG" alt="banner" height="700" justify="left">
             </div>
-            <article id="grid-middle">
-                <section id="container">
-                    <img src="leftside.jpg" alt="Advert" class="propaganda" width="250">
-                    <span class="link" id="videoLink">Click here to watch the video</span>
-                    <!-- <div class="hidden-video" id="videoContainer">
-                        <iframe width="640" height="360" 
-                            src="https://www.youtube.com/embed/VIDEO_ID" 
-                            frameborder="0" 
-                            allowfullscreen> 
-                        </iframe>
-                    </div> -->
-                    
-                </section>
-            </article>
+                <article id="grid-middle">
+                    <section id="container">
+                        <img src="leftside.jpg" alt="Advert" class="propaganda" width="250">
+                        <span class="link" id="videoLink">Click here to watch the video</span>
+                    </section>
+                </article>
             <div id="grid-bottom"></div>
         </div>
         <div class="hidden-video" id="videoContainer">
@@ -73,7 +63,7 @@
                     videoLink.textContent = 'Click here to watch the video'; // Change link text
                 } else {
                     videoContainer.style.display = 'block'; // Show the video
-                    videoLink.textContent = 'Hide the video'; // Change link text
+                
                 }
             });
 
@@ -87,23 +77,19 @@
                 document.getElementById("videoContainer").style.display = "none";
             }
 
-            const menuButton = document.getElementById('menuButton');
-            const popupMenu = document.getElementById('popupMenu');
-    
-            menuButton.addEventListener('click', () => {
-                if (popupMenu.style.display === 'block') {
-                    popupMenu.style.display = 'none';
-                } else {
-                    popupMenu.style.display = 'block';
-                }
+            const showDivButton = document.getElementById('showDivButton');
+            const hiddenDiv = document.getElementById('hiddenDiv');
+            const hideDivButton = document.getElementById('hideDivButton');
+
+            showDivButton.addEventListener('click', () => {
+                hiddenDiv.classList.remove('hidden'); // Show the div
             });
-    
-            // Close the popup menu if clicking outside of it
-            window.addEventListener('click', (event) => {
-                if (!menuButton.contains(event.target) && !popupMenu.contains(event.target)) {
-                    popupMenu.style.display = 'none';
-                }
+
+            hideDivButton.addEventListener('click', () => {
+                hiddenDiv.classList.add('hidden'); // Hide the div
             });
+
+           
         </script>
     </body>
 </html>
