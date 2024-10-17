@@ -17,33 +17,51 @@
                     <h1 class="headher">
                     Republic Recruiting office
                     </h1>
-                    <nav>
-                        <button id="showDivButton">Show Div</button>
 
-                        <div id="hiddenDiv" class="hidden">
-                            <h2>This is the hidden div!</h2>
-                            <p>You can see me now!</p>
-                            <button id="hideDivButton">Hide Div</button>
-                        </div>
-                    </nav>
-                    
+                    <div>
+                        
+                    </div>
+    
                 </header>
             </div>
             <div id="grid-right-banner">
-                <img src="banner.PNG" alt="banner" height="700" justify="right">
+                <img src="banner.PNG" alt="Republic Banner" height="700" justify="right">
             </div>
             <div id="grid-left-banner">
-                <img src="banner.PNG" alt="banner" height="700" justify="left">
+                <img src="banner.PNG" alt="Republic Banner" height="700" justify="left">
             </div>
                 <article id="grid-middle">
                     <section id="container">
-                        <img src="leftside.jpg" alt="Advert" class="propaganda" width="250">
-                        <span class="link" id="videoLink">Click here to watch the video</span>
+                        <div class="main-container">
+                            <p><h2>Welcome to the Army of the Republic</h2>
+
+                            <h1>Defend. Serve. Lead.</h1>
+                                
+                            <h3>Join the proud ranks of the Army of the Republic, where commitment to duty, honor, and country comes first. We stand united in our mission to protect the freedoms we cherish and uphold the values that define us as a nation.</h3></p>
+                            
+                            <h2>Why Join Us?</h2>
+                            <ul>
+                            <li>Empower Your Future: Gain invaluable skills, receive world-class training, and open doors to endless opportunities.</li>
+                            <li>Serve with Honor: Be part of something greater than yourself. Make a difference in the lives of others and contribute to the common good. </li>
+                            <li>Community and Camaraderie: Join a diverse family of dedicated individuals who share your commitment to service and sacrifice. </li>
+                            </ul>
+                        <span class="link" id="vidLink">Click here to watch the video</span>
+                        <span class="link" id="abtLink">about us</span>
+                        <span class="link" id="contactLink">contact info</span>
+                    </div>
+                        <figure>
+                            <img src="leftside.jpg" alt="Advert" class="propaganda" width="225px">
+                            <figcaption> The Republic Army defending Coruscant.</figcaption>
+                        </figure>
+                        
+                        
+
                     </section>
                 </article>
             <div id="grid-bottom"></div>
         </div>
-        <div class="hidden-video" id="videoContainer">
+
+        <div class="hidden" id="hiddenContainer">
             <div class="popup-content">
                 <iframe width="640" height="360" 
                     src="https://www.youtube.com/embed/VIDEO_ID" 
@@ -53,43 +71,102 @@
                 <span class="close" id="close-popup">&times;</span>
             </div>
         </div>
+
+        <div class="hidden" id="hiddenAbtContainer">
+            <div class="popup-content">
+                <p>
+                    About Us
+                    United in Service, Strength, and Sacrifice
+
+                    The Grand Army of the Republic stands as a beacon of hope and strength, dedicated to the protection and service of our nation and its values. Founded on principles of duty, honor, and respect, we are more than just a military force—we are a family committed to safeguarding freedom and promoting peace.
+
+                    Our Mission
+                    Our mission is to defend our homeland against any threat, support our allies, and foster stability around the globe. We believe in the importance of proactive engagement and humanitarian efforts, ensuring that our presence contributes to a safer and more secure world.
+
+                    Core Values
+                    Integrity: We uphold the highest ethical standards and act with honesty in all our endeavors.
+                    Courage: We face challenges head-on, demonstrating bravery in the pursuit of our mission.
+                    Commitment: We are dedicated to our duty, our fellow soldiers, and the communities we serve.
+                    Training and Development
+                    We provide comprehensive training programs designed to equip our members with the skills and knowledge necessary for success. From advanced military tactics to leadership development, we ensure that our soldiers are prepared for any challenge they may encounter.
+
+                    Community Engagement
+                    The Grand Army of the Republic is deeply rooted in the communities we serve. We actively participate in outreach programs, educational initiatives, and disaster relief efforts, reinforcing our commitment to making a positive impact both at home and abroad.
+
+                    Join Us
+                    If you are looking to make a difference and serve a greater cause, consider joining the Grand Army of the Republic. We offer a diverse range of career paths and opportunities for personal growth, leadership, and camaraderie.
+
+                    Together, we stand strong. Together, we defend our nation.
+
+
+                </p>
+                <span class="close" id="close-abt-popup">&times;</span>
+            </div>
+        </div>
+        <div class="hidden" id="hiddenContContainer">
+            <div class="popup-content">
+                <p>
+                    Contact Information for the Grand Army of the Republic
+                    General Inquiries:
+
+                    Phone: (555) 012-3456
+                    Email: info@grandarmyrepublic.org
+                    Recruitment Office:
+
+                    Phone: (555) 987-6543
+                    Email: recruitment@grandarmyrepublic.org
+                    Headquarters Address: Grand Army of the Republic
+                    123 Valor Lane
+                    Fort Courage, AR 67890
+
+                    Social Media:
+
+                    Facebook: facebook.com/GrandArmyRepublic
+                    Twitter: twitter.com/GrandArmyRep
+                    Instagram: instagram.com/GrandArmyRepublic
+                </p>
+                <span class="close" id="close-cont-popup">&times;</span>
+            </div>
+        </div>
+    
         <script>
-            const videoLink = document.getElementById('videoLink');
-            const videoContainer = document.getElementById('videoContainer');
+            const videoLink = document.getElementById('vidLink');
+            const videoContainer = document.getElementById('hiddenContainer');
+            const abtLink = document.getElementById('abtLink');
+            const abtContainer = document.getElementById('hiddenAbtContainer');
+            const contLink = document.getElementById('contactLink');
+            const contContainer = document.getElementById('hiddenContContainer');
+
 
             videoLink.addEventListener('click', () => {
-                if (videoContainer.style.display === 'block') {
-                    videoContainer.style.display = 'none'; // Hide the video
-                    videoLink.textContent = 'Click here to watch the video'; // Change link text
-                } else {
-                    videoContainer.style.display = 'block'; // Show the video
-                
+                videoContainer.style.display = videoContainer.style.display === 'block' ? 'none' : 'block';
+            });
+
+            abtLink.addEventListener('click', () => {
+                abtContainer.style.display = abtContainer.style.display === 'block' ? 'none' : 'block';
+            });
+
+            contLink.addEventListener('click', () => {
+                contContainer.style.display = contContainer.style.display === 'block' ? 'none' : 'block';
+            });
+
+            document.querySelectorAll('.close').forEach(closeBtn => {
+                closeBtn.onclick = function() {
+                    this.parentElement.parentElement.style.display = "none";
                 }
             });
 
             window.onclick = function(event) {
-                if (event.target == document.getElementById("videoContainer")) {
-                    document.getElementById("videoContainer").style.display = "none";
+                if (event.target === videoContainer) {
+                    videoContainer.style.display = "none";
                 }
-            }   
-
-            document.getElementById("close-popup").onclick = function() {
-                document.getElementById("videoContainer").style.display = "none";
+                if (event.target === abtContainer) {
+                    abtContainer.style.display = "none";
+                }
+                if (event.target === contContainer) {
+                    contContainer.style.display = "none";
+                }
             }
-
-            const showDivButton = document.getElementById('showDivButton');
-            const hiddenDiv = document.getElementById('hiddenDiv');
-            const hideDivButton = document.getElementById('hideDivButton');
-
-            showDivButton.addEventListener('click', () => {
-                hiddenDiv.classList.remove('hidden'); // Show the div
-            });
-
-            hideDivButton.addEventListener('click', () => {
-                hiddenDiv.classList.add('hidden'); // Hide the div
-            });
-
-           
         </script>
     </body>
 </html>
