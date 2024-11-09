@@ -1,4 +1,5 @@
-
+/* I had to redesign my flexboxes and grids to make it so the works was being done by them. There were a few alignment issues because of this. 
+ i adjusted the way i measured the columns and rows and it fixed the issues. I also added responsiveness. */
 #grid-container {
     display: grid; 
     justify-content: space-between;
@@ -101,10 +102,6 @@
     padding:10px;
 }
 
-/* iframe > .hidden-video{
-    display: flex;
-} */
-
 .link {
     color: #284c72;
     cursor: pointer;
@@ -133,4 +130,70 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  @media screen and (max-width: 768px) {
+    /* Make the grid layout stack in a single column */
+    #grid-container {
+        grid-template-columns: 1fr;  /* Single column layout for mobile */
+        grid-template-rows: auto auto auto auto;
+    }
+
+    /* Make the images smaller */
+    #bannar, #bannar2 {
+        max-height: 400px;
+    }
+
+    #ganda {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust font sizes */
+    h1, h2, h3 {
+        font-size: 1.5em;  /* Scale down the text on smaller screens */
+    }
+
+    .dropdown-content {
+        min-width: 100%;  /* Full-width dropdown on mobile */
+    }
+
+    /* Stacked navigation links */
+    #grid-menu {
+        text-align: center;
+    }
+
+    /* Hide banners on smaller screens (optional) */
+    #grid-left-banner, #grid-right-banner {
+        display: none;
+    }
+
+    /* Adjust the main container to be more mobile-friendly */
+    #container {
+        padding: 15px;
+    }
+
+    /* Adjust button styles */
+    #themeChange {
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    /* Popup styles */
+    .popup-content {
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+/* Further adjustments for very small screens (extra small devices like phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #logo {
+        height: 100px;  /* Smaller logo for small screens */
+    }
+}
   
