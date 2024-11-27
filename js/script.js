@@ -4,6 +4,8 @@ const abtLink = document.getElementById('abtLink');
 const abtContainer = document.getElementById('hiddenAbtContainer');
 const contLink = document.getElementById('contactLink');
 const contContainer = document.getElementById('hiddenContContainer');
+const menuLink = document.getElementById('menuLink')
+const menuContainer = document.getElementById('menuContent')
 
 
 videoLink.addEventListener('click', () => {
@@ -16,6 +18,10 @@ abtLink.addEventListener('click', () => {
 
 contLink.addEventListener('click', () => {
     contContainer.style.display = contContainer.style.display === 'block' ? 'none' : 'block';
+});
+
+menuLink.addEventListener('click', () => {
+    menuContainer.style.display = contContainer.style.display === 'block' ? 'none' : 'block';
 });
 
 document.querySelectorAll('.close').forEach(closeBtn => {
@@ -33,6 +39,9 @@ window.onclick = function(event) {
     }
     if (event.target === contContainer) {
         contContainer.style.display = "none";
+    }
+    if (event.target === menuContainer) {
+        menuContainer.style.display = "none";
     }
 }
 
