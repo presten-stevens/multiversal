@@ -6,6 +6,8 @@ const contLink = document.getElementById('contactLink');
 const contContainer = document.getElementById('hiddenContContainer');
 const menuLink = document.getElementById('menuLink')
 const menuContainer = document.getElementById('menuContent')
+const formLink = document.getElementById('formLink')
+const formContainer = document.getElementById('formContent')
 
 
 videoLink.addEventListener('click', () => {
@@ -21,7 +23,11 @@ contLink.addEventListener('click', () => {
 });
 
 menuLink.addEventListener('click', () => {
-    menuContainer.style.display = contContainer.style.display === 'block' ? 'none' : 'block';
+    menuContainer.style.display = menuContainer.style.display === 'block' ? 'none' : 'block';
+});
+
+formLink.addEventListener('click', () => {
+    formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block';
 });
 
 document.querySelectorAll('.close').forEach(closeBtn => {
@@ -42,6 +48,9 @@ window.onclick = function(event) {
     }
     if (event.target === menuContainer) {
         menuContainer.style.display = "none";
+    }
+    if(event.target === formContainer){
+        formContainer.style.display = "none";
     }
 }
 
