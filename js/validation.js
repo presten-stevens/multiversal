@@ -1,5 +1,4 @@
-let phoneRegex = /[a-z]/
-let phoneNumber = /(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+let phoneRegex = /(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 let emailRegex = /[\w]*@[\w]*.{1}(com|gov|edu|io|net){1}/;
 let zipCodeRegex = /(?<zip1>\d{5})([-]?(?<zip2>\d{4}))?(?<ERROR>.+)?/
 

@@ -1,5 +1,4 @@
-/* I had to redesign my flexboxes and grids to make it so the works was being done by them. There were a few alignment issues because of this. 
- i adjusted the way i measured the columns and rows and it fixed the issues. I also added responsiveness. */
+/*I added changes to the buttons so that they were more centered and the shadow would change with the theme. */
 #grid-container {
     display: grid; 
     justify-content: space-between;
